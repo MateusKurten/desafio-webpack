@@ -1,7 +1,7 @@
-#Desafio Webpack
+# Desafio Webpack
 
 Site estático usando Webpack
 
-##Documentação
+## Documentação
 
-*[Webpack](https://webpack.js.org/)
+* [Webpack](https://webpack.js.org/)
