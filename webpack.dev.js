@@ -12,12 +12,11 @@ module.exports = {
     },
 
     module: {
-        rules: [
-            {//Regras para o HTML
+        rules: [{ //Regras para o HTML
                 test: /\.html$/,
                 loader: 'html-loader',
             },
-            {//Regras para o JS
+            { //Regras para o JS
                 test: /\.js$/,
                 exclude: /node_modules/,
                 loader: 'babel-loader',
@@ -25,20 +24,36 @@ module.exports = {
                     presets: ['@babel/preset-env']
                 }
             },
-            {//Regras para o CSS
+            { // Regras para arquivos SASS
+                test: /\.s[ac]ss$/i,
+                use: [
+                    'style-loader',
+                    'css-loader',
+                    'sass-loader',
+                ],
+            },
+            { //Regras para o CSS
                 test: /\.css$/,
                 use: [
                     "style-loader",
                     "css-loader"
                 ]
             },
-            {//Regras para imagens
+            { //Regras para imagens
                 test: /\.(png|jpg|gif)$/i,
                 loader: "file-loader",
                 options: {
                     name: 'images/[name].[ext]',
                     esModule: false
-                  },
+                },
+            },
+            { //Regras para fontes
+                test: /\.(ttf|otf|woff|woff2|svg|eot)$/i,
+                loader: "file-loader",
+                options: {
+                    name: 'fonts/[name].[ext]',
+                    esModule: false
+                }
             }
         ]
     },
