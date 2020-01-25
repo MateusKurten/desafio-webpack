@@ -39,7 +39,6 @@ module.exports = {
                     "css-loader"
                 ]
             },
-<<<<<<< HEAD
             {//Regras para arquivos SASS
                 test: /\.s[ac]ss$/i,
                 use: [
@@ -49,9 +48,6 @@ module.exports = {
                 ] 
             },
             {//Regras para imagens
-=======
-            { //Regras para imagens
->>>>>>> 44de28136b3d8556616f302053c3f5c9618f6217
                 test: /\.(png|jpg|gif)$/i,
                 loader: "file-loader",
                 options: {
