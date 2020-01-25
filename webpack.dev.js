@@ -33,7 +33,7 @@ module.exports = {
                 ]
             },
             {//Regras para arquivos SASS
-                test: /\.sass$/,
+                test: /\.s[ac]ss$/i,
                 use: [
                     "style-loader",
                     "css-loader",
